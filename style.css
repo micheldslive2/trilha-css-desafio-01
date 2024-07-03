@@ -1,0 +1,223 @@
+/* Reset and global styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: black;
+    width: 1440px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+section, div {
+    width: 100%;
+}
+
+p, span {
+    font-size: 16px;
+}
+
+/* Banner styles */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 605px;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid rgb(51, 169, 219);
+}
+
+.banner::after, .banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.banner::after {
+    background: url(./assets/images/banner.png) no-repeat center center, rgb(51, 169, 219, 0.6);
+    background-size: cover;
+    filter: brightness(0.4);
+    z-index: -2;
+}
+
+.banner::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 25%, rgba(49, 168, 221, 0) 50%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.8) 100%);
+    filter: brightness(0.6);
+}
+
+.banner-content {
+    width: 514px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    background: rgba(0, 0, 0, 0.6);
+    width: 268px;
+    height: 268px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 47px;
+}
+
+.banner-content p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 23.48px;
+}
+
+.banner button {
+    width: 326px;
+    height: 57px;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 16px 36px;
+    color: #31A8DD;
+    background-color: transparent;
+    border-image: linear-gradient(#3BA1CD, #1572B7);
+    border-image-slice: 10;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* Course content styles */
+#course-content {
+    width: 792px;
+    height: 325px;
+    gap: 24px;
+    margin: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+}
+
+#course-content > p {
+    text-align: center;
+}
+
+.modules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.module {
+    width: 535px;
+    height: 51px;
+    border-radius: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background: rgb(37, 37, 37);
+    border: 1px inset rgb(51, 168, 219);
+}
+
+h1, h2, button {
+    background: linear-gradient(180deg, #33A8DB 0%, #1472B7 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+}
+
+/* Transform world section */
+#transform-world {
+    background: black;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    border-top: 1px inset rgba(51, 169, 219, 0.4);
+    border-bottom: 1px inset rgba(51, 169, 219, 0.4);
+    position: relative;
+    filter: brightness(2.4);
+}
+
+#transform-world::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background: url(./assets/images/woman-code.png) no-repeat center center, rgba(51, 169, 219, 0.2);
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: saturation darken;
+}
+
+#transform-world p {
+    font-weight: 900;
+    font-size: 40px;
+    width: 244px;
+    text-transform: lowercase;
+    filter: drop-shadow(3px 3px 0px rgba(51, 169, 219, 0.6)) brightness(0.6);
+}
+
+/* Professional challenges section */
+#professional-challenges {
+    width: 846px;
+    text-align: center;
+    margin: 96px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+}
+
+#professional-challenges > p {
+    width: 792px;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 36px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(49, 168, 221, 0.2) 100%);
+    background-blend-mode: darken;
+}
+
+footer a {
+    color: rgba(51, 168, 219, 1);
+    text-decoration: none;
+}
